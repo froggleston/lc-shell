@@ -1,6 +1,8 @@
 name: "04 Maintain: Update Workflow Files"
 
 on:
+  schedule:
+    - cron: '0/15 * * * *'
   workflow_dispatch:
     inputs:
       name:
