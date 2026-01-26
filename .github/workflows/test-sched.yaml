@@ -1,0 +1,16 @@
+name: "Test schedule"
+
+on:
+  schedule:
+    - cron: '0/15 * * * *'
+
+jobs:
+  test:
+    name: "Test schedule"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Do something"
+        id: check
+        run: |
+          echo "Testing Testing Testing"
+        shell: bash
