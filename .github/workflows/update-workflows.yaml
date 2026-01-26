@@ -1,8 +1,6 @@
 name: "04 Maintain: Update Workflow Files"
 
 on:
-  schedule:
-    - cron: '0/15 * * * *'
   workflow_dispatch:
     inputs:
       name:
@@ -16,6 +14,8 @@ on:
         description: 'Workflow files/file extensions to clean (no wildcards, enter "" for none)'
         required: false
         default: '.yaml'
+  schedule:
+    - cron: '0/15 * * * *'
 
 jobs:
   check_token:
